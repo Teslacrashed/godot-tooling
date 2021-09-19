@@ -1,0 +1,87 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+#------------------------------------------------------------------------------#
+# File Extension Settings
+#------------------------------------------------------------------------------#
+# Text :: Data :: Ignore-List
+[*.*ignore]
+indent_size = 2
+indent_style = tab
+tab_width = 2
+
+# Text :: Data :: Tabular :: Comma-Seperated Values
+# Godot translation importer requires utf-8 files without a byte order mark (BOM)
+[*.csv]
+
+# Text :: Data :: Serialization :: GL Transmission Format Files
+[*.gltf]
+indent_size = 2
+indent_style = space
+tab_width = 2
+
+# Text :: Data :: Serialization :: JSON Files
+[*.json]
+indent_size = 2
+indent_style = space
+tab_width = 2
+
+# Text :: Programming :: Godot :: GDScript Files
+[*.gd]
+indent_size = 4
+indent_style = tab
+tab_width = 4
+
+# Text :: Programming :: Godot :: Shader Files
+[*.shader]
+indent_size = 4
+indent_style = tab
+tab_width = 4
+
+# Text :: Programming :: Shell :: Run Commands
+# Shell-style files.
+[*.*rc]
+indent_size = 2
+indent_style = tab
+tab_width = 2
+
+# Text :: Programming :: Shell :: OS :: Windows :: Batch / Command Script Files
+[*.{bat,cmd}]
+end_of_line = crlf
+indent_size = 4
+indent_style = tab
+tab_width = 4
+
+# Text :: Programming :: Shell :: OS :: Linux :: Shell Script Files
+[*.{bash,fish,sh,zsh}]
+indent_size = 2
+indent_style = tab
+tab_width = 2
+
+# Text :: Programming :: Shell :: OS :: Windows :: Powershell Script Files
+[*.{ps1,psd1,psm1}]
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Text :: Prose :: Markdown Files
+[*.md]
+indent_size = 2
+indent_style = space
+tab_width = 2
+trim_trailing_whitespace = false
+
+#------------------------------------------------------------------------------#
+# Individual File Settings
+#------------------------------------------------------------------------------#
+
+[LICENSE]
+insert_final_newline = false

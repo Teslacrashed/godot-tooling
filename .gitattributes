@@ -1,0 +1,265 @@
+# .gitattributes
+#------------------------------------------------------------------------------#
+# GitHub Linguist Settings
+#------------------------------------------------------------------------------#
+# linguist-detectable    : Include in stats, even if language type is data or prose
+# linguist-documentation : Exclude from stats
+# linguist-generated     : Exclude from stats, exclude from diffs
+# linguist-language      : Classify and provide syntax highlighting
+#   Language Types : data, programming, markup, prose, nil
+# linguist-vendored      : Exclud from stats
+
+#------------------------------------------------------------------------------#
+# GitHub Linguist Languages
+#------------------------------------------------------------------------------#
+# Text :: Prose :: Documentation Folder
+.import/* linguist-generated
+docs/* linguist-documentation
+
+# Text :: Data :: Editor Config Files
+.editorconfig linguist-language=EditorConfig
+
+# Text :: Data :: Git Files
+.gitattributes linguist-language=Git-Attributes
+.gitignore linguist-language=Git-Ignore-List
+.gitconfig linguist-language=Git-Config
+.gitmodules linguist-language=Git-Config
+
+# Text :: Data :: Godot Misc Files
+*.cfg linguist-generated linguist-language=INI
+*.flags linguist-generated linguist-language=INI
+*.gdnlib linguist-generated linguist-language=INI
+*.gdns linguist-generated linguist-language=INI
+*.import linguist-generated linguist-language=INI
+*.godot linguist-generated linguist-language=INI
+*.md5 linguist-generated linguist-langauge=INI
+
+# Text :: Data :: Godot Resource Files
+*.tres linguist-generated linguist-language=INI
+
+# Text :: Data :: Godot Scene Files
+*.escn linguist-generated linguist-langauge=INI
+*.tscn linguist-generated linguist-language=INI
+
+# Text :: Data :: Ignore List Files
+*.*ignore linguist-language=Ignore-List
+
+# Text :: Data :: Serialized :: GL Transmission Format Files
+*.gltf linguist-language=JSON
+
+# Text :: Data :: Serialized :: JSON Files
+*.json linguist-language=JSON
+
+# Text :: Data :: Tabular :: CSV Files
+*.csv linguist-language=CSV
+
+# Text :: Programming :: Godot  Files
+*.gd linguist-detectable linguist-language=GDScript
+*.shader linguist-language=GLSL
+
+# Text :: Programming :: Shell Run Command Files
+*.*rc linguist-language=Shell
+
+# Text :: Prose :: Markdown
+*.md linguist-documentation linguist-language=Markdown
+
+# Text :: Prose :: reStructuredText
+*.rst linguist-documentation linguist-language=reStructuredText
+
+#------------------------------------------------------------------------------#
+# Git Attributes Settings
+# https://git-scm.com/docs/gitattributes
+# Set git attribute behavior for files.
+#
+# text eol=<lf/crlf>    : always convert line endings to specified on checkout
+# text auto             : let git handle converting to workspace to repo
+# binary                : don't apply line endings or diff
+# diff                  : define a diff driver external or internal
+#   built-in diff drivers:
+#     ada, bash, bibtex, cpp, csharp, css, dts, elixer, fortran, fountain,
+#     golang, html, java, markdown, matlab, objc, pascal, perl, php, python,
+#     ruby, rust, scheme, tex
+#
+# Verify git attribute settings using:
+# % `git check-attr --all -- <pathname>`
+
+#------------------------------------------------------------------------------#
+# Git Attributes Macros
+# Binary = -diff -merge -text
+[attr]lfs      filter=lfs diff=lfs merge=lfs -text
+[attr]spaces   whitespace=trailing-space,space-before-tab,tabs-in-indent
+[attr]tabs-2   whitespace=trailing-space,space-before-tab,indent-with-non-tab,tabwidth=2
+[attr]tabs-4   whitespace=trailing-space,space-before-tab,indent-with-non-tab,tabwidth=4
+[attr]vendored -diff
+
+# Text :: Data :: Editor Config Files
+.editorconfig text eol=lf
+
+# Text :: Data :: Git Files
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.gitconfig text eol=lf
+.gitmodules text eol=lf
+
+# Text :: Data :: Godot Misc Files
+*.cfg text eol=lf
+*.flags text eol=lf
+*.godot text eol=lf
+*.gdn text eol=lf
+*.gdnlib text eol=lf
+*.godot text eol=lf
+*.import text eol=lf
+*.md5 text eol=lf
+
+# Text :: Data :: Godot Resource Files
+*.tres text eol=lf
+
+# Text :: Data :: Godot Scene Files
+*.escn text eol=lf
+*.tscn text eol=lf
+
+# Text :: Data :: Ignore List Files
+*.*ignore text eol=lf tabs-2
+
+# Text :: Data :: Serialized :: GL Transmission Format Files
+*.gltf text eol=lf tabs-2
+
+# Text :: Data :: Serialized :: JSON Files
+*.json text eol=lf tabs-2
+
+# Text :: Data :: Tabular :: CSV Files
+*.csv text eol=lf
+
+# Text :: Programming :: Godot Script Files
+*.gd text eol=lf tabs-4
+*.shader text eol=lf tab-4
+
+# Text :: Programming :: Shell :: Run Commands
+*.*rc text eol=lf tabs-2
+
+# Text :: Programming :: Shell :: Linux Script Files
+*.bash text eol=lf diff=bash tabs-2
+*.fish text eol=lf tabs-2
+*.sh text eol=lf diff=bash tabs-2
+*.zsh text eol=lf tabs-2
+
+# Text :: Programming :: Shell :: Windows Script Files
+# These are explicitly windows files and should use crlf
+*.bat text eol=crlf tabs-4
+*.cmd text eol=crlf tabs-4
+*.ps1 text eol=crlf spaces
+*.psd1 text eol=crlf spaces
+*.psm1 text eol=crlf spaces
+
+# Text :: Prose :: Documentation Files
+*.md text eol=lf diff=markdown
+*.rst text eol=lf
+*.txt text eol=lf
+
+# Text :: Prose :: Project Standard Individual Files
+AUTHORS text
+CHANGELOG text
+CHANGES text
+CONTRIBUTING text
+COPYING text
+*COPYRIGHT* text
+INSTALL text
+LICENSE text
+NEWS text
+*README* text
+TODO text
+
+#------------------------------------------------------------------------------#
+# Binary Files Supported By Godot
+#------------------------------------------------------------------------------#
+
+# Binary :: Godot :: Resource Files
+*.res binary
+# Binary :: Godot :: Scene Files
+*.scn binary
+# Binary :: Godot :: Theme Files
+*.theme binary
+# Binary :: Godot :: Translation Files
+*.translation binary
+# Binary :: Godot :: 3D Model :: Animation files
+*.anim binary
+# Binary :: Godot :: 3D Model :: Internal / Imported Files
+*.material binary
+*.mesh binary
+*.meshlib binary
+# Binary :: Godot :: Sound :: Imported Files
+*.sample binary
+# Binary :: Godot :: Streaming Texture Files
+*.stex binary
+
+# Binary :: 3D Formats :: Godot Supported
+*.blend* binary
+*.dae binary
+*.fbx binary
+*.glb binary
+*.mtl binary
+*.obj binary
+
+# Binary :: Audio Files :: Godot Supported
+*.mp3 binary
+*.ogg binary
+*.wav binary
+
+# Binary :: Font Files :: Godot Supported
+*.fnt binary
+*.otf binary
+*.ttf binary
+
+# Binary :: Image Files :: Godot Supported
+*.exr binary
+*.hdr binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.svgz binary
+*.webp binary
+
+# Binary :: Image Files :: Godot Supported :: Undocumented
+*.bmp binary
+*.tga binary
+*.dds binary
+
+#------------------------------------------------------------------------------#
+# Formats not supported by Godot, but may still commit to the repo
+#------------------------------------------------------------------------------#
+
+# Graphics Editor Format Files
+
+# Binary :: Graphics Editor :: Adobe :: Illustrator Files
+*.ai binary
+# Binary :: Graphics Editor :: Adobe :: Swatch Exchange Files
+*.ase binary
+# Binary ::  Graphics Editor :: Adobe :: Encapsulated PostScript Files
+*.eps binary
+# Binary :: Graphics Editor :: Adobe :: Photoshop Files
+*.psd binary
+
+# Binary :: Graphics Editor :: Affinity :: Design Files
+*.afdesign binary
+# Binary :: Graphics Editor :: Affinity :: Photo Files
+*.afphoto binary
+
+# Binary :: Graphics Editor :: Asesprite Files
+# Aseprite normally uses .ase extension
+# But .ase is used by Adobe Swatch Exchange files.
+# Uncomment if you don't plan to use Adobe Swatch Files
+#*.ase binary
+*.aseprite binary
+
+# Binary :: Graphics Editor :: GIMP :: Experimental Computing Facility Files
+*.xcf binary
+
+# Binary :: Graphics Editor :: Krita Files
+*.kra binary
+
+# Binary :: Graphics Editor :: Sprite Studio :: Cell Map Files
+*.ssce binary
+# Binary :: Graphics Editor :: Sprite Studio :: Animation Files
+*.ssae binary
+# Binary :: Graphics Editor :: Sprite Studio :: Effect Files
+*.ssee binary
