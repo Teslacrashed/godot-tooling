@@ -1,0 +1,152 @@
+# .gitignore
+
+# Godot Import Folder and Generated Import Files
+.import/
+*.md5
+*.sample
+*.stex
+
+export_web/
+
+# Godot Misc Files
+*.import
+*.gen.*
+# Auto-generated from CSV files.
+*.translation
+export.cfg
+export_presets.cfg
+
+# Project Personal Junk Folder
+attic/
+
+# Project Log Folder and Log Files
+logs/
+*.log
+
+# Build Results
+bld/
+[Bb]in/
+[Bb]uild/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Oo]bj/
+[Rr]elease/
+x64/
+x86/
+*.debug
+*.dSYM
+
+# Archive Files
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.rar
+*.zip
+
+# Executable Files
+*.app
+*.com
+*.exe
+*.out
+
+# Misc Files
+*.bak
+*.tmp
+*.tmp_proj
+
+#------------------------------------------------------------------------------#
+# OS Mac
+#------------------------------------------------------------------------------#
+# General
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+#------------------------------------------------------------------------------#
+# OS Linux
+#------------------------------------------------------------------------------#
+*~
+# temporary files which can be created if a process still has a handle open of a deleted file
+# Filesystem in UserSpace
+.fuse_hidden*
+# Linux trash folder which might appear on any partition or disk
+.Trash/
+.Trash-*/
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+.Trashes
+Icon?
+
+# KDE
+.directory
+
+# Kate
+# Kate swap files
+.*.kate-swp
+.swp.*
+
+# Vim
+# Vim swap files
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+# Vim session files
+Session.vim
+# Vim temporary files
+.netrwhist
+# Vim auto-generated tag files
+tags
+# Vim persistent undo
+[._]*.un~
+
+#------------------------------------------------------------------------------#
+# OS Windows
+#------------------------------------------------------------------------------#
+~$*
+*.autosave
+# Windows dump file
+*.stackdump
+
+ehthumbs.db
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+logo.h
+*.autosave
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+# Windows shortcuts
+*.lnk
