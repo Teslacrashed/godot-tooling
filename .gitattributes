@@ -90,7 +90,7 @@ docs/* linguist-documentation
 [attr]spaces   whitespace=trailing-space,space-before-tab,tabs-in-indent
 [attr]tabs-2   whitespace=trailing-space,space-before-tab,indent-with-non-tab,tabwidth=2
 [attr]tabs-4   whitespace=trailing-space,space-before-tab,indent-with-non-tab,tabwidth=4
-[attr]vendored -diff
+[attr]vendored -diff (-merge too?)
 
 # Text :: Data :: Editor Config Files
 .editorconfig text eol=lf
