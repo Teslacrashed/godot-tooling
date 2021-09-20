@@ -12,8 +12,9 @@
 #------------------------------------------------------------------------------#
 # GitHub Linguist Languages
 #------------------------------------------------------------------------------#
-# Text :: Prose :: Documentation Folder
+# Data & Text :: Godot Auto-Generated Import Folder
 .import/* linguist-generated
+# Text :: Prose :: Documentation Folder
 docs/* linguist-documentation
 
 # Text :: Data :: Editor Config Files
